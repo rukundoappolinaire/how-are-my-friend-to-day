@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact Us | Kira Clinic</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#f5f5f5;
+      color:#222;
+    }
+
+    /* HEADER */
+
+    header{
+      background:#7aa400;
+      color:white;
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      font-size:32px;
+      font-weight:bold;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:20px;
+      font-size:16px;
+    }
+
+    nav a:hover{
+      color:yellow;
+    }
+
+    /* HERO SECTION */
+
+    .hero{
+      height:500px;
+
+      background:
+      linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+      url('https://images.unsplash.com/photo-1551601651-2a8555f1a136?q=80&w=1200&auto=format&fit=crop');
+
+      background-size:cover;
+      background-position:center;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:white;
+    }
+
+    .hero h1{
+      font-size:65px;
+      margin-bottom:15px;
+    }
+
+    .hero p{
+      font-size:22px;
+    }
+
+    /* CONTACT SECTION */
+
+    .contact{
+      padding:90px 10%;
+      background:white;
+    }
+
+    .contact-container{
+      display:flex;
+      align-items:center;
+      gap:50px;
+      flex-wrap:wrap;
+    }
+
+    /* LEFT SIDE IMAGE */
+
+    .contact-image{
+      flex:1;
+    }
+
+    .contact-image img{
+      width:100%;
+      border-radius:15px;
+      box-shadow:0 0 15px rgba(0,0,0,0.15);
+    }
+
+    /* RIGHT SIDE FORM */
+
+    .contact-form{
+      flex:1;
+      background:#f9f9f9;
+      padding:40px;
+      border-radius:15px;
+      box-shadow:0 0 15px rgba(0,0,0,0.08);
+    }
+
+    .contact-form h2{
+      color:#7aa400;
+      font-size:42px;
+      margin-bottom:20px;
+    }
+
+    .contact-form p{
+      color:#666;
+      margin-bottom:30px;
+      line-height:1.8;
+    }
+
+    input,
+    textarea{
+      width:100%;
+      padding:15px;
+      margin-bottom:20px;
+      border:1px solid #ccc;
+      border-radius:5px;
+      font-size:16px;
+      outline:none;
+    }
+
+    textarea{
+      height:130px;
+      resize:none;
+    }
+
+    button{
+      background:#7aa400;
+      color:white;
+      border:none;
+      padding:15px 30px;
+      border-radius:5px;
+      font-size:16px;
+      cursor:pointer;
+      font-weight:bold;
+    }
+
+    button:hover{
+      background:#5d7e00;
+    }
+
+    /* CONTACT INFO */
+
+    .info{
+      padding:80px 10%;
+      background:#eef3e2;
+      text-align:center;
+    }
+
+    .info h2{
+      font-size:45px;
+      color:#7aa400;
+      margin-bottom:50px;
+    }
+
+    .info-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .info-box{
+      background:white;
+      padding:35px;
+      border-radius:10px;
+      box-shadow:0 0 10px rgba(0,0,0,0.08);
+    }
+
+    .info-box h3{
+      margin-bottom:15px;
+      color:#222;
+    }
+
+    .info-box p{
+      color:#666;
+      line-height:1.8;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#1d1d1d;
+      color:white;
+      padding:50px 10%;
+    }
+
+    .footer-container{
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:30px;
+    }
+
+    .footer-box{
+      width:300px;
+    }
+
+    .footer-box h3{
+      margin-bottom:20px;
+    }
+
+    .footer-box p,
+    .footer-box a{
+      color:#ccc;
+      line-height:1.8;
+      text-decoration:none;
+      display:block;
+    }
+
+    .copyright{
+      text-align:center;
+      margin-top:40px;
+      border-top:1px solid #444;
+      padding-top:20px;
+      color:#aaa;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      header{
+        flex-direction:column;
+      }
+
+      nav{
+        margin-top:15px;
+      }
+
+      .hero h1{
+        font-size:40px;
+      }
+
+      .contact-container{
+        flex-direction:column;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="logo">Kira Clinic</div>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">Doctors</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div>
+      <h1>Contact Us</h1>
+      <p>Talk with our healthcare support team anytime</p>
+    </div>
+
+  </section>
+
+  <!-- CONTACT SECTION -->
+
+  <section class="contact">
+
+    <div class="contact-container">
+
+      <!-- IMAGE -->
+
+      <div class="contact-image">
+
+        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1200&auto=format&fit=crop">
+
+      </div>
+
+      <!-- FORM -->
+
+      <div class="contact-form">
+
+        <h2>Get In Touch</h2>
+
+        <p>
+          Contact Kira Clinic for medical consultation,
+          emergency support, and healthcare assistance.
+        </p>
+
+        <form>
+
+          <input type="text" placeholder="Your Name" required>
+
+          <input type="email" placeholder="Your Email" required>
+
+          <input type="text" placeholder="Subject">
+
+          <textarea placeholder="Write your message"></textarea>
+
+          <button type="submit">Send Message</button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT INFO -->
+
+  <section class="info">
+
+    <h2>Contact Information</h2>
+
+    <div class="info-container">
+
+      <div class="info-box">
+
+        <h3>Phone Number</h3>
+
+        <p>+250 788 888 888</p>
+
+      </div>
+
+      <div class="info-box">
+
+        <h3>Email Address</h3>
+
+        <p>info@kiraclinic.com</p>
+
+      </div>
+
+      <div class="info-box">
+
+        <h3>Location</h3>
+
+        <p>Kigali, Rwanda</p>
+
+      </div>
+
+      <div class="info-box">
+
+        <h3>Working Hours</h3>
+
+        <p>Monday - Sunday : 24/7</p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-container">
+
+      <div class="footer-box">
+
+        <h3>KIRA CLINIC</h3>
+
+        <p>Rwanda, Kigali</p>
+        <p>Phone: +250 788 888 888</p>
+        <p>Email: info@kiraclinic.com</p>
+
+      </div>
+
+      <div class="footer-box">
+
+        <h3>Quick Links</h3>
+
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Doctors</a>
+        <a href="#">Contact</a>
+
+      </div>
+
+      <div class="footer-box">
+
+        <h3>Follow Us</h3>
+
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+        <a href="#">YouTube</a>
+
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 Kira Clinic. All Rights Reserved.
+    </div>
+
+  </footer>
+
+</body>
+</html>

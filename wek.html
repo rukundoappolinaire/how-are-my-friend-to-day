@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kira Clinic Services</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#f4f4f4;
+      color:#222;
+    }
+
+    /* HEADER */
+
+    header{
+      background:#7aa400;
+      padding:18px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      color:white;
+    }
+
+    .logo{
+      font-size:32px;
+      font-weight:bold;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:20px;
+      font-size:15px;
+    }
+
+    nav a:hover{
+      color:yellow;
+    }
+
+    /* HERO */
+
+    .hero{
+      height:350px;
+      background:
+      linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+      url('https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?q=80&w=1200&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      color:white;
+      text-align:center;
+    }
+
+    .hero h1{
+      font-size:55px;
+      margin-bottom:15px;
+    }
+
+    .hero p{
+      font-size:18px;
+    }
+
+    /* SERVICES SECTION */
+
+    .services{
+      padding:80px 10%;
+      background:white;
+    }
+
+    .services-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .services-title h2{
+      font-size:42px;
+      color:#7aa400;
+      margin-bottom:10px;
+    }
+
+    .services-title p{
+      color:#666;
+      font-size:18px;
+    }
+
+    .service-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
+    }
+
+    .service-card{
+      background:#f9f9f9;
+      border-radius:10px;
+      overflow:hidden;
+      box-shadow:0 0 10px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .service-card:hover{
+      transform:translateY(-10px);
+    }
+
+    .service-card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .service-content{
+      padding:25px;
+    }
+
+    .service-content h3{
+      color:#7aa400;
+      margin-bottom:15px;
+      font-size:28px;
+    }
+
+    .service-content p{
+      line-height:1.7;
+      color:#555;
+      margin-bottom:20px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:12px 25px;
+      background:#7aa400;
+      color:white;
+      text-decoration:none;
+      border-radius:5px;
+      font-weight:bold;
+    }
+
+    .btn:hover{
+      background:#5f8200;
+    }
+
+    /* WHY CHOOSE US */
+
+    .choose{
+      padding:80px 10%;
+      background:#eef3e2;
+      text-align:center;
+    }
+
+    .choose h2{
+      font-size:40px;
+      margin-bottom:20px;
+      color:#7aa400;
+    }
+
+    .choose-boxes{
+      margin-top:50px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .choose-box{
+      background:white;
+      padding:30px;
+      border-radius:10px;
+      box-shadow:0 0 10px rgba(0,0,0,0.08);
+    }
+
+    .choose-box h3{
+      margin-bottom:15px;
+      color:#222;
+    }
+
+    .choose-box p{
+      color:#666;
+      line-height:1.7;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#1d1d1d;
+      color:white;
+      padding:50px 10%;
+    }
+
+    .footer-container{
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:30px;
+    }
+
+    .footer-box{
+      width:300px;
+    }
+
+    .footer-box h3{
+      margin-bottom:20px;
+    }
+
+    .footer-box p,
+    .footer-box a{
+      color:#ccc;
+      line-height:1.8;
+      text-decoration:none;
+      display:block;
+    }
+
+    .copyright{
+      text-align:center;
+      margin-top:40px;
+      border-top:1px solid #444;
+      padding-top:20px;
+      color:#aaa;
+    }
+
+    @media(max-width:768px){
+
+      header{
+        flex-direction:column;
+      }
+
+      nav{
+        margin-top:15px;
+      }
+
+      .hero h1{
+        font-size:40px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="logo">Kira Clinic</div>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">Doctors</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div>
+      <h1>Our Medical Services</h1>
+      <p>Professional healthcare services for everyone</p>
+    </div>
+
+  </section>
+
+  <!-- SERVICES -->
+
+  <section class="services">
+
+    <div class="services-title">
+      <h2>Services We Offer</h2>
+      <p>We provide quality healthcare with experienced doctors</p>
+    </div>
+
+    <div class="service-container">
+
+      <!-- CARD 1 -->
+
+      <div class="service-card">
+
+        <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="service-content">
+
+          <h3>Vaccination</h3>
+
+          <p>
+            We offer safe vaccination services for children and adults
+            to protect against diseases and improve health.
+          </p>
+
+          <a href="#" class="btn">Read More</a>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 2 -->
+
+      <div class="service-card">
+
+        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="service-content">
+
+          <h3>Medical Consultation</h3>
+
+          <p>
+            Get professional medical consultation from our experienced
+            doctors and healthcare specialists.
+          </p>
+
+          <a href="#" class="btn">Read More</a>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 3 -->
+
+      <div class="service-card">
+
+        <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="service-content">
+
+          <h3>Laboratory Tests</h3>
+
+          <p>
+            Modern laboratory equipment provides accurate test results
+            for better diagnosis and treatment.
+          </p>
+
+          <a href="#" class="btn">Read More</a>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 4 -->
+
+      <div class="service-card">
+
+        <img src="https://images.unsplash.com/photo-1580281657527-47f249e8f4df?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="service-content">
+
+          <h3>Dental Care</h3>
+
+          <p>
+            We provide quality dental services including teeth cleaning,
+            treatment, and oral health consultation.
+          </p>
+
+          <a href="#" class="btn">Read More</a>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 5 -->
+
+      <div class="service-card">
+
+        <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="service-content">
+
+          <h3>Emergency Care</h3>
+
+          <p>
+            Emergency healthcare services are available 24/7 for urgent
+            medical situations and quick support.
+          </p>
+
+          <a href="#" class="btn">Read More</a>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 6 -->
+
+      <div class="service-card">
+
+        <img src="https://images.unsplash.com/photo-1581595219315-a187dd40c322?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="service-content">
+
+          <h3>Pharmacy</h3>
+
+          <p>
+            Our pharmacy provides quality medicines and healthcare
+            products with professional guidance.
+          </p>
+
+          <a href="#" class="btn">Read More</a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- WHY CHOOSE US -->
+
+  <section class="choose">
+
+    <h2>Why Choose Kira Clinic?</h2>
+
+    <div class="choose-boxes">
+
+      <div class="choose-box">
+        <h3>Experienced Doctors</h3>
+        <p>
+          Our clinic has qualified and experienced healthcare specialists.
+        </p>
+      </div>
+
+      <div class="choose-box">
+        <h3>Modern Equipment</h3>
+        <p>
+          We use modern medical equipment for accurate treatment.
+        </p>
+      </div>
+
+      <div class="choose-box">
+        <h3>24/7 Support</h3>
+        <p>
+          We provide healthcare support and emergency services anytime.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-container">
+
+      <div class="footer-box">
+
+        <h3>KIRA CLINIC</h3>
+
+        <p>Rwanda, Kigali</p>
+        <p>Phone: +250 788 888 888</p>
+        <p>Email: info@kiraclinic.com</p>
+
+      </div>
+
+      <div class="footer-box">
+
+        <h3>Our Services</h3>
+
+        <a href="#">Consultation</a>
+        <a href="#">Laboratory</a>
+        <a href="#">Dental Care</a>
+        <a href="#">Vaccination</a>
+
+      </div>
+
+      <div class="footer-box">
+
+        <h3>Follow Us</h3>
+
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+        <a href="#">YouTube</a>
+
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 Kira Clinic. All Rights Reserved.
+    </div>
+
+  </footer>
+
+</body>
+</html>

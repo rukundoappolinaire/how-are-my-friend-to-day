@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kira Clinic Doctors</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#f5f5f5;
+      color:#222;
+    }
+
+    /* HEADER */
+
+    header{
+      background:#7aa400;
+      color:white;
+      padding:18px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      font-size:32px;
+      font-weight:bold;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:20px;
+      font-size:15px;
+    }
+
+    nav a:hover{
+      color:yellow;
+    }
+
+    /* HERO */
+
+    .hero{
+      height:350px;
+      background:
+      linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+      url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1200&auto=format&fit=crop');
+
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:white;
+    }
+
+    .hero h1{
+      font-size:55px;
+      margin-bottom:15px;
+    }
+
+    .hero p{
+      font-size:20px;
+    }
+
+    /* DOCTORS SECTION */
+
+    .doctors{
+      padding:80px 10%;
+      background:white;
+    }
+
+    .title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .title h2{
+      font-size:42px;
+      color:#7aa400;
+      margin-bottom:15px;
+    }
+
+    .title p{
+      color:#666;
+      font-size:18px;
+    }
+
+    .doctor-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .doctor-card{
+      background:#f9f9f9;
+      border-radius:10px;
+      overflow:hidden;
+      box-shadow:0 0 10px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .doctor-card:hover{
+      transform:translateY(-10px);
+    }
+
+    .doctor-card img{
+      width:100%;
+      height:320px;
+      object-fit:cover;
+    }
+
+    .doctor-content{
+      padding:25px;
+      text-align:center;
+    }
+
+    .doctor-content h3{
+      color:#7aa400;
+      margin-bottom:10px;
+      font-size:28px;
+    }
+
+    .doctor-content h4{
+      margin-bottom:15px;
+      color:#333;
+    }
+
+    .doctor-content p{
+      color:#555;
+      line-height:1.8;
+      margin-bottom:20px;
+    }
+
+    .btn{
+      display:inline-block;
+      background:#7aa400;
+      color:white;
+      padding:12px 25px;
+      border-radius:5px;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    .btn:hover{
+      background:#5f8200;
+    }
+
+    /* SERVICES */
+
+    .services{
+      padding:80px 10%;
+      background:#eef3e2;
+      text-align:center;
+    }
+
+    .services h2{
+      font-size:40px;
+      color:#7aa400;
+      margin-bottom:50px;
+    }
+
+    .service-boxes{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .service-box{
+      background:white;
+      padding:30px;
+      border-radius:10px;
+      box-shadow:0 0 10px rgba(0,0,0,0.08);
+    }
+
+    .service-box h3{
+      margin-bottom:15px;
+      color:#222;
+    }
+
+    .service-box p{
+      color:#666;
+      line-height:1.7;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#1d1d1d;
+      color:white;
+      padding:50px 10%;
+    }
+
+    .footer-container{
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:30px;
+    }
+
+    .footer-box{
+      width:300px;
+    }
+
+    .footer-box h3{
+      margin-bottom:20px;
+    }
+
+    .footer-box p,
+    .footer-box a{
+      color:#ccc;
+      text-decoration:none;
+      display:block;
+      line-height:1.8;
+    }
+
+    .copyright{
+      text-align:center;
+      margin-top:40px;
+      border-top:1px solid #444;
+      padding-top:20px;
+      color:#aaa;
+    }
+
+    @media(max-width:768px){
+
+      header{
+        flex-direction:column;
+      }
+
+      nav{
+        margin-top:15px;
+      }
+
+      .hero h1{
+        font-size:40px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="logo">Kira Clinic</div>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">Doctors</a>
+      <a href="#">Partnership</a>
+      <a href="#">Contact</a>
+    </nav>
+
+  </header>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div>
+      <h1>Our Doctors</h1>
+      <p>Meet our experienced healthcare specialists</p>
+    </div>
+
+  </section>
+
+  <!-- DOCTORS -->
+
+  <section class="doctors">
+
+    <div class="title">
+
+      <h2>Professional Doctors</h2>
+
+      <p>
+        Kira Clinic has qualified doctors ready to provide
+        quality healthcare services.
+      </p>
+
+    </div>
+
+    <div class="doctor-container">
+
+      <!-- DOCTOR 1 -->
+
+      <div class="doctor-card">
+
+        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="doctor-content">
+
+          <h3>Dr. John Smith</h3>
+
+          <h4>General Doctor</h4>
+
+          <p>
+            Provides medical consultation, diagnosis,
+            and treatment for different illnesses.
+          </p>
+
+          <a href="#" class="btn">Read More</a>
+
+        </div>
+
+      </div>
+
+      <!-- DOCTOR 2 -->
+
+      <div class="doctor-card">
+
+        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="doctor-content">
+
+          <h3>Dr. Sarah Wilson</h3>
+
+          <h4>Dentist</h4>
+
+          <p>
+            Specializes in dental treatment,
+            oral healthcare, and teeth cleaning.
+          </p>
+
+          <a href="#" class="btn">Read More</a>
+
+        </div>
+
+      </div>
+
+      <!-- DOCTOR 3 -->
+
+      <div class="doctor-card">
+
+        <img src="https://images.unsplash.com/photo-1651008376811-b90baee60c1f?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="doctor-content">
+
+          <h3>Dr. David Brown</h3>
+
+          <h4>Laboratory Specialist</h4>
+
+          <p>
+            Performs laboratory tests and provides
+            accurate medical analysis and diagnosis.
+          </p>
+
+          <a href="#" class="btn">Read More</a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SERVICES -->
+
+  <section class="services">
+
+    <h2>What Our Doctors Do</h2>
+
+    <div class="service-boxes">
+
+      <div class="service-box">
+
+        <h3>Medical Consultation</h3>
+
+        <p>
+          Doctors provide professional healthcare advice
+          and treatment recommendations.
+        </p>
+
+      </div>
+
+      <div class="service-box">
+
+        <h3>Diagnosis & Treatment</h3>
+
+        <p>
+          We diagnose illnesses and provide quality
+          treatment for patients.
+        </p>
+
+      </div>
+
+      <div class="service-box">
+
+        <h3>Patient Care</h3>
+
+        <p>
+          Our doctors ensure patients receive the best
+          healthcare support and follow-up.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-container">
+
+      <div class="footer-box">
+
+        <h3>KIRA CLINIC</h3>
+
+        <p>Rwanda, Kigali</p>
+        <p>Phone: +250 788 888 888</p>
+        <p>Email: info@kiraclinic.com</p>
+
+      </div>
+
+      <div class="footer-box">
+
+        <h3>Quick Links</h3>
+
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Doctors</a>
+        <a href="#">Contact</a>
+
+      </div>
+
+      <div class="footer-box">
+
+        <h3>Follow Us</h3>
+
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+        <a href="#">YouTube</a>
+
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 Kira Clinic. All Rights Reserved.
+    </div>
+
+  </footer>
+
+</body>
+</html>
